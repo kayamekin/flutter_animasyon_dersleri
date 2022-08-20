@@ -12,17 +12,17 @@ class _NewPageState extends State<NewPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Center(
-          child: Column(
+      body: Column(
         children: [
           Hero(
             tag: 'logo',
             child: FlutterLogo(
               size: 100,
+              textColor: Colors.green,
             ),
           )
         ],
-      )),
+      ),
     );
   }
 }
