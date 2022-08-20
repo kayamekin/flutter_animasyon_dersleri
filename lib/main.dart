@@ -60,8 +60,10 @@ class _MyHomePageState extends State<MyHomePage>
     animations =
         ColorTween(begin: Colors.red, end: Colors.blue).animate(controller);
     animations2 = AlignmentTween(begin: Alignment(-1, -1), end: Alignment(1, 1))
-        .animate(controller);
-    animations3 = CurvedAnimation(parent: controller, curve: Curves.bounceIn);
+        .animate(
+            CurvedAnimation(parent: controller, curve: Curves.easeInOutExpo));
+    animations3 =
+        CurvedAnimation(parent: controller, curve: Curves.easeInOutExpo);
 
     // controller.reverse(from: 100);
     controller.forward();
@@ -109,8 +111,8 @@ class _MyHomePageState extends State<MyHomePage>
             style: TextStyle(fontSize: controller.value + 20),
           ),
         ),
-        Text("you have pushed never problem yes solved",
-            style: TextStyle(fontSize: animations3.value * 36)),
+        Text("you have pushed never problem",
+            style: TextStyle(fontSize: animations3.value * 20)),
         ElevatedButton(
             onPressed: () {
               Navigator.push(
