@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animasyonlar/animatedcontainerkullanimi.dart';
 import 'package:flutter_animasyonlar/new_page.dart';
 
 class OpenMenuButtonPage extends StatelessWidget {
@@ -9,12 +10,24 @@ class OpenMenuButtonPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text("animation page")),
       body: Center(
-        child: ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => NewPage()));
-            },
-            child: Text("Animasyonlu sayfaya geç")),
+        child: Column(
+          children: [
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => NewPage()));
+                },
+                child: Text("Animasyonlu sayfaya geç")),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => AnimasyonluWidgetlar()));
+                },
+                child: Text("Animated Container Kullanımı")),
+          ],
+        ),
       ),
     );
   }

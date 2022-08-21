@@ -19,7 +19,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.purple,
       ),
-      home: const MyHomePage(title: 'Animation'),
+      // home: const MyHomePage(title: 'Animation'),
+      home: const OpenMenuButtonPage(),
     );
   }
 }
@@ -137,7 +138,7 @@ class _MyHomePageState extends State<MyHomePage>
                     child: Container(
                       width: 50,
                       height: 50,
-                      child: Center(
+                      child: const Center(
                         child: Text("hello",
                             style: TextStyle(
                                 color: Colors.white,
